@@ -24,12 +24,17 @@ function createWindow() {
 	mainWindow.webContents.on('did-finish-load', function () {
 		mainWindow.webContents.insertCSS(
 			//'html{box-sizing: border-box;border-style: solid;border-color: slategray;border-radius: 5px;}' + // 전체 페이지
-			'div.notion-sidebar-container{display:none !important;}' + // 좌측 바
+			'::-webkit-scrollbar{ width: 10px;}' +
+				'::-webkit-scrollbar-track{ background: #f1f1f1; } ' +
+				'::-webkit-scrollbar-thumb{ background: #888; }' +
+				'::-webkit-scrollbar-thumb:hover{ background: #555; }' +
+				'div.notion-sidebar-container{display:none !important;}' + // 좌측 바
 				'div.notion-frame > div:nth-child(1){display:none !important;}' + // 상단 바
 				'div.notion-page-controls{display:none !important;}' + // 아이콘, 커버, 댓글 추가 버튼
 				'div.notion-help-button{display:none !important;}' + // 도움말 버튼
-				'div.notion-frame > div.notion-scroller > div:nth-child(1) > div{padding:20px;-webkit-app-region: drag;position: fixed;background-color: gray;z-index: 100;font-color: white;}' + // 제목
-				'div.notion-frame > div.notion-scroller > div:nth-child(2) > div{height: 90px !important;}' + // 제목 아래 여백
+				'div.notion-frame > div.notion-scroller{margin:90px 0 0 0;}' + // 스크롤
+				'div.notion-frame > div.notion-scroller > div:nth-child(1) > div{left: 0px !important;padding:20px !important;height:90px !important;-webkit-app-region: drag;position: fixed;top: 0px;background-color: gray;z-index: 100;}' + // 제목
+				'div.notion-frame > div.notion-scroller > div:nth-child(2) > div{display:none !important;}' + // 제목 아래 여백
 				'div.notion-page-content{padding:0 20px 0 20px !important;}' + // 내용 페이지
 				'.notion-selectable{max-width: none !important;}' + // 각 셀
 				''
