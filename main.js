@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 dotenv.config();
-// Modules to control application life and create native browser window
+
 const { app, BrowserWindow } = require('electron');
 const console = require('console');
 const path = require('path');
@@ -9,8 +9,8 @@ app.console = new console.Console(process.stdout, process.stderr);
 function createWindow() {
 	// Create the browser window.
 	const mainWindow = new BrowserWindow({
-		width: 800,
-		height: 600,
+		width: 1300,
+		height: 1080,
 		webPreferences: {
 			preload: path.join(__dirname, 'preload.js'),
 		},
@@ -27,16 +27,16 @@ function createWindow() {
 				'div.notion-frame > div:nth-child(1){display:none !important;}' + // 상단 바
 				'div.notion-page-controls{display:none !important;}' + // 아이콘, 커버, 댓글 추가 버튼
 				'div.notion-help-button{display:none !important;}' + // 도움말 버튼
-				'div.notion-scroller > div:nth-child(1) > div{padding:20px !important;-webkit-app-region: drag;position: fixed;background-color: gray;z-index: 100;font-color: white;}' + // 제목
-				'div.notion-scroller > div:nth-child(2) > div{display:none !important;}' + // 제목 아래 여백
-				'div.notion-page-content{padding:100px 0 0 20px !important;}' + // 내용 페이지
+				'div.notion-frame > div.notion-scroller > div:nth-child(1) > div{padding:20px;-webkit-app-region: drag;position: fixed;background-color: gray;z-index: 100;font-color: white;}' + // 제목
+				'div.notion-frame > div.notion-scroller > div:nth-child(2) > div{height: 90px !important;}' + // 제목 아래 여백
+				'div.notion-page-content{padding:0 20px 0 20px !important;}' + // 내용 페이지
 				'.notion-selectable{max-width: none !important;}' + // 각 셀
 				''
 		);
 	});
 
 	// Open the DevTools.
-	// mainWindow.webContents.openDevTools()
+	mainWindow.webContents.openDevTools();
 }
 
 // This method will be called when Electron has finished
