@@ -22,6 +22,7 @@
 	},
 	"dependencies": {
 		"dotenv": "^8.2.0",
-		"electron": "^10.1.3"
+		"electron": "^10.1.3",
+		"electron-cfg": "^1.2.5"
 	}
 }
