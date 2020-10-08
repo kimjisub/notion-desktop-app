@@ -1,0 +1,25 @@
+{
+	"name": "notion-widget",
+	"version": "1.0.0",
+	"description": "notion widget",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron ."
+	},
+	"repository": "https://github.com/kimjisub/notion-widget",
+	"keywords": [
+		"Electron",
+		"quick",
+		"start",
+		"tutorial",
+		"demo"
+	],
+	"author": "kimjisub",
+	"license": "CC0-1.0",
+	"devDependencies": {
+		"electron": "^10.1.3"
+	},
+	"dependencies": {
+		"dotenv": "^8.2.0"
+	}
+}
