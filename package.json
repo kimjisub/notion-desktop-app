@@ -44,12 +44,14 @@
 						"ia32"
 					]
 				}
-			]
+			],
+			"icon": "./notion.ico"
 		},
 		"nsis": {
 			"oneClick": true,
 			"perMachine": false,
-			"createDesktopShortcut": true
+			"createDesktopShortcut": true,
+			"installerIcon": "./notion.ico"
 		}
 	}
 }
