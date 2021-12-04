@@ -1,0 +1,61 @@
+/* 도움말 버튼 */
+div.notion-help-button {
+	display: none !important;
+}
+
+/* 드래그 영역 */
+.notion-topbar {
+	-webkit-app-region: drag;
+	height: 100%;
+}
+
+/* 드래그 안되게 */
+.notion-topbar > * > * {
+	-webkit-app-region: no-drag;
+}
+
+/* 창 작아지면 */
+@media (max-width: 600px) {
+	/* 기능 버튼들 숨기기 */
+	.notion-topbar-action-buttons {
+		visibility: hidden;
+		width: 0;
+	}
+
+	.notion-sidebar-container {
+		visibility: hidden;
+		width: 0px !important;
+	}
+	.notion-frame {
+		width: auto !important;
+	}
+
+	/* 내용 페이지 */
+	.notion-page-content {
+		padding: 0 20px 0 20px !important;
+	}
+
+	.notion-frame > .notion-scroller > *:nth-child(1),
+	.notion-frame > .notion-scroller > *:nth-child(2) {
+		display: none !important;
+	}
+
+	.notion-page-content > .notion-collection_view-block {
+		width: 100vw !important;
+		padding: 28px !important;
+	}
+
+	.notion-page-content > .notion-collection_view-block > *:first-child {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	.notion-table-view {
+		padding: 0 0 10px !important;
+	}
+}
+
+/* 각 셀 */
+.notion-selectable {
+	max-width: none !important;
+}

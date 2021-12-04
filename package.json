@@ -5,7 +5,11 @@
 	"main": "main.js",
 	"scripts": {
 		"start": "electron .",
-		"dev": "nodemon --exec \"yarn start\""
+		"dev": "nodemon"
+	},
+	"nodemonConfig": {
+		"exec": "yarn start",
+		"ext": "js, css"
 	},
 	"repository": "https://github.com/kimjisub/notion-widget",
 	"keywords": [
