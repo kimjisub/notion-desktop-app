@@ -5,7 +5,8 @@
 	"main": "main.js",
 	"scripts": {
 		"start": "electron .",
-		"dev": "nodemon"
+		"dev": "nodemon",
+		"build": "electron-builder build"
 	},
 	"nodemonConfig": {
 		"exec": "yarn start",
@@ -23,11 +24,32 @@
 	"license": "CC0-1.0",
 	"devDependencies": {
 		"electron-builder": "^22.8.1",
-		"nodemon": "^2.0.4"
+		"nodemon": "^2.0.4",
+		"electron": "^10.1.3"
 	},
 	"dependencies": {
 		"dotenv": "^8.2.0",
-		"electron": "^10.1.3",
 		"electron-cfg": "^1.2.5"
+	},
+	"build": {
+		"asar": true,
+		"appId": "me.kimjisub.notion",
+		"productName": "Notion Desktop",
+		"win": {
+			"target": [
+				{
+					"target": "nsis",
+					"arch": [
+						"x64",
+						"ia32"
+					]
+				}
+			]
+		},
+		"nsis": {
+			"oneClick": true,
+			"perMachine": false,
+			"createDesktopShortcut": true
+		}
 	}
 }
