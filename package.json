@@ -1,5 +1,5 @@
 {
-	"name": "notion-widget",
+	"name": "notion-desktop-app",
 	"version": "1.0.0",
 	"description": "notion widget",
 	"main": "main.js",
@@ -12,7 +12,7 @@
 		"exec": "yarn start",
 		"ext": "js, css"
 	},
-	"repository": "https://github.com/kimjisub/notion-widget",
+	"repository": "https://github.com/kimjisub/notion-desktop-app",
 	"keywords": [
 		"Electron",
 		"quick",

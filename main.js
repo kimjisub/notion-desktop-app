@@ -9,6 +9,7 @@ function createWindow() {
 	const mainWindow = cfg.window().create({
 		minWidth: 200,
 		frame: false,
+		transparent: false,
 	});
 
 	mainWindow.loadURL('https://www.notion.so');

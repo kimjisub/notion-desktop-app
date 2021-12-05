@@ -7,6 +7,7 @@ div.notion-help-button {
 .notion-topbar {
 	-webkit-app-region: drag;
 	height: 100%;
+	opacity: 1 !important;
 }
 
 /* 드래그 안되게 */
