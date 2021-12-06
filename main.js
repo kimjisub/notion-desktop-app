@@ -10,6 +10,7 @@ function createWindow() {
 		minWidth: 200,
 		frame: false,
 		transparent: false,
+		icon: path.join(__dirname, 'notion.ico'),
 	});
 
 	mainWindow.loadURL('https://www.notion.so');
