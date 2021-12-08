@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, shell } = require('electron');
 const cfg = require('electron-cfg');
 const console = require('console');
 const path = require('path');
@@ -20,6 +20,11 @@ function createWindow() {
 
 		mainWindow.webContents.on('did-finish-load', function () {
 			mainWindow.webContents.insertCSS(data.toString());
+		});
+
+		mainWindow.webContents.on('new-window', function (event, url) {
+			event.preventDefault();
+			shell.openExternal(url);
 		});
 	});
 
