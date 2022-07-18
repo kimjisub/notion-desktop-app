@@ -4,14 +4,19 @@ div.notion-help-button {
 }
 
 /* 드래그 영역 */
-.notion-topbar {
+.notion-topbar > *:first-child {
 	-webkit-app-region: drag;
 	height: 100%;
 	opacity: 1 !important;
 }
 
 /* 드래그 안되게 */
-.notion-topbar > * > * {
+.notion-topbar > *:first-child > *,
+.notion-peek-renderer
+	> div
+	> div:nth-child(2)
+	> div:nth-child(1)
+	> div:nth-child(1) {
 	-webkit-app-region: no-drag;
 }
 
@@ -36,8 +41,7 @@ div.notion-help-button {
 		padding: 0 20px 0 20px !important;
 	}
 
-	.notion-frame > .notion-scroller > *:nth-child(1),
-	.notion-frame > .notion-scroller > *:nth-child(2) {
+	.whenContentEditable > div:nth-child(2) {
 		display: none !important;
 	}
 
